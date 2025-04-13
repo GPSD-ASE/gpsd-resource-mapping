@@ -3,12 +3,12 @@ entries:
   gpsd-resource-mapping:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-04-13T14:03:06.822824949Z"
+    created: "2025-04-13T22:32:03.163700129Z"
     description: A Helm chart for deploying the GPSD resource mapping service.
-    digest: b552e1d7c23e16b0c0956cb80ffe32605bc95efa5e99be6f9b0c784b561afddc
+    digest: e7ff05bc83dc2ac386a581eb4b29860989a9d3670f4e214f35a3875d20ceb3fc
     name: gpsd-resource-mapping
     type: application
     urls:
-    - https://gpsd-ase.github.io/gpsd-resource-mapping/gpsd-resource-mapping-0.0.2.tgz
-    version: 0.0.2
-generated: "2025-04-13T14:03:06.822426285Z"
+    - https://gpsd-ase.github.io/gpsd-resource-mapping/gpsd-resource-mapping-0.0.3.tgz
+    version: 0.0.3
+generated: "2025-04-13T22:32:03.163301884Z"
