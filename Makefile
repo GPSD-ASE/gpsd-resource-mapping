@@ -42,18 +42,23 @@ clean-container:
 .PHONY: test test-coverage test-verbose
 
 test:
+	@echo "Running tests..."
 	pytest tests/ -v
 
 test-coverage:
+	@echo "Running tests with coverage..."
 	pytest tests/ -v --cov=app --cov-report=html:coverage/
 
 test-verbose:
+	@echo "Running tests with verbose output..."
 	pytest -vs
 
 test-package:
+	@echo "Running tests for package $(PKG)..."
 	pytest tests/$(PKG) -v
 
 test-clean:
+	@echo "Cleaning up test artifacts..."
 	rm -rf coverage/
 	rm -rf .pytest_cache/
 	rm -rf .coverage
