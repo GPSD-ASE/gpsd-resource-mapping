@@ -1,0 +1,33 @@
+namespace: gpsd
+
+replicaCount: 1
+
+image:
+  repository: gpsd/gpsd-resource-mapping
+  tag: v0.0.1
+  pullPolicy: Always
+
+service:
+  - name: http
+    type: ClusterIP
+    port: 8000
+    targetPort: 8000
+
+env:
+  RESOURCE_MAPPING_ENV: "TEST"
+  MAP_MGMT_APP_PORT: "8000"
+  VAULT_ADDR: "http://vault.vault.svc.cluster.local:8200"
+  VAULT_AUTH_METHOD: "kubernetes"
+  VAULT_ROLE: "gpsd-resource-mapping"
+
+serviceAccount:
+  create: true
+  name: gpsd-resource-mapping-sa
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 80
